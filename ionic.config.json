@@ -1,5 +1,7 @@
 {
   "name": "ion2-Future",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
