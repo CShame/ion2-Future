@@ -6,6 +6,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content (ionScroll)="ionScroll()">
+
+  <div style='height:200px;background: peachpuff;'>
+
+  </div>
+
+  <div #scrollDiv class='scroll-div'>
+    <ion-scroll #card scrollX="true" class="ion-scrall-style">
+      <div #item (click)="onTap(nav,i)" *ngFor="let nav of navList; let i= index" class="scroll-item">
+        <span [ngClass]='{"selectedColor": selectedIndex === i}'>{{nav.title}}</span>
+        <hr [ngClass]='{"selectedBgColor": selectedIndex === i}' />
+      </div>
+    </ion-scroll>
+  </div>
+
+
+  <div id='content'>
+    <div *ngFor="let data1 of navList" id='{{data1.id}}'>
+      <div style='height: 200px;'>{{data1.title}}</div>
+    </div>
+  </div>
 
 </ion-content>

@@ -11,7 +11,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpClientModule } from '@angular/common/http';
 import { CalendarModule } from "ion2-calendar";
+import { Md5 } from 'ts-md5/dist/md5';
+import {CodePush} from "@ionic-native/code-push";
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { CalendarModule } from "ion2-calendar";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    CalendarModule
+    CalendarModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,6 +41,8 @@ import { CalendarModule } from "ion2-calendar";
   providers: [
     StatusBar,
     SplashScreen,
+    Md5,
+    CodePush,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

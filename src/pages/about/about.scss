@@ -1,3 +1,63 @@
 page-about {
+    .scroll-div{
+        top: 56px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        .ion-scrall-style{
+            white-space: nowrap;
+            height: 40px;
+            overflow: hidden;
+            border-bottom: 1px solid #dedee2;
+        
+            .scroll-item {
+                display: inline-block;
+                margin: 11px 10px 0 10px;
+                text-align: center;
+                hr{
+                    border: 0;
+                    height: 2px;
+                    width:100%;
+                    margin-bottom: 0;
+                    background: transparent;
+                }
+                .selectedBgColor{
+                    background: #1fb5ff;
+                }
+                .selectedColor{
+                    color: #1fb5ff;
+                }
 
+            }
+            
+        }
+
+        .ion-scrall-style::before{
+            content:'';
+            width:10px;
+            height: 40px;
+            background: rgba(255,255,255,0.8);
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+        }
+    
+        .ion-scrall-style::after{
+            content:'';
+            width:10px;
+            height: 40px;
+            background: rgba(255,255,255,0.8);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+    }
+
+
+      ::-webkit-scrollbar{
+        display:none;
+      }
 }
